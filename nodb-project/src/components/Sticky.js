@@ -42,20 +42,26 @@ class Sticky extends Component {
                 </div>
 
                 {this.state.isEditing ? (
-                    <div>
+                    <div className='editing-sticky-div'>
                         <input 
-                        placeholder={this.props.sticky.contents}
-                        onChange={this.handleChange} />
-                        <button onClick={this.toggleEdit}>Cancel</button>
-                        <button onClick={this.handleSaveContents}>Save</button>
+                        placeholder="Enter task here..."
+                        onChange={this.handleChange}
+                        className="task-input"
+                         />
+                        <div className="cancel-and-save-buttons-div">
+                            <button className="cancel-button" onClick={this.toggleEdit}>Cancel</button>
+                            <button className="save-button" onClick={this.handleSaveContents}>Save</button>
+                        </div>
                     </div>
                 ):(
+                    <div className="sticky-contents-div">
                     <p 
                     className="sticky-contents"
-                    onDoubleClick={this.toggleEdit}
+                    onClick={this.toggleEdit}
                     >
                     {this.props.sticky.contents}
                     </p>
+                    </div>
                 )}
             </div>
         )

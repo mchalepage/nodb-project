@@ -12,14 +12,16 @@ class AddSticky extends Component {
 
     handleAddSticky(){
         const newSticky = {
-            contents: 'Type something...',
+            contents: 'Click to add a task...',
         }
         this.props.makeSticky(newSticky)
     }
 
     render(){
         return (
-            <button onClick={this.handleAddSticky}>+</button>
+            <div className="add-sticky-div">
+                <button className="add-sticky-button" onClick={this.handleAddSticky}>+</button>
+            </div>
         )
     }
 }
