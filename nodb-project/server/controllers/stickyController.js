@@ -18,8 +18,8 @@ module.exports = {
     editSticky: (req, res) => {
         const {id} = req.params
         const {newContents} = req.body
-        const index = stickies.findIndex(stickies => {
-            return stickies.id === +id
+        const index = stickies.findIndex(sticky => {
+            return sticky.id === +id
         })
 
         if (index === -1){
@@ -30,8 +30,8 @@ module.exports = {
     },
     deleteSticky: (req, res) => {
         const {id} = req.params
-        const index = stickies.findIndex(stickies => {
-            return stickies.id === +id
+        const index = stickies.findIndex(sticky => {
+            return sticky.id === +id
         })
         if (index === -1){
             return res.status(404).send('Sticky not found')
@@ -39,4 +39,4 @@ module.exports = {
         stickies.splice(index, 1)
         res.status(200).send(stickies)
     }
-}
+} 
