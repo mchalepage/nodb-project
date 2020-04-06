@@ -16,10 +16,7 @@ function Stickies(props){
 
     return (
         <div className="all-stickies">
-            <div>
-            {stickiesList}
-            </div>
-            
+            {stickiesList}          
         </div>
     )
 }

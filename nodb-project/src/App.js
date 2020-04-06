@@ -24,16 +24,16 @@ class App extends Component {
     })
   }
 
-  makeSticky(sticky){
-    axios.post('/api/stickies/sticky', sticky).then(res => {
+  makeSticky(newSticky){
+    axios.post('/api/stickies/sticky', newSticky).then(res => {
       this.setState({
         allStickies: res.data
       })
     })
   }
 
-  editSticky(id, updates){
-    axios.post(`/api/stickies/sticky/${id}`, {updates}).then(res => {
+  editSticky(id, newContents){
+    axios.put(`/api/stickies/sticky/${id}`, {newContents}).then(res => {
       this.setState({
         allStickies: res.data
       })
@@ -58,8 +58,8 @@ class App extends Component {
         />
         <Stickies 
         allStickies={this.state.allStickies}
-        // editSticky={this.editSticky}
-        // deleteSticky={this.deleteSticky}
+        editSticky={this.editSticky}
+        deleteSticky={this.deleteSticky}
         />
       </div>
     );

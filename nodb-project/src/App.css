@@ -1,3 +1,13 @@
+* {
+  box-sizing: border-box;
+}
+body{
+  background-color: #31343a;
+  display: flex;
+  box-sizing: border-box;
+}
+
+
 .App {
   text-align: center;
 }
@@ -8,27 +18,58 @@
 }
 
 .App-header {
-  background-color: #282c34;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
 }
 
 .App-link {
   color: #61dafb;
 }
 
-#all-stickies{
-  width: 500px;
-  height: 500px;
-  background-color: tomato;
+.all-stickies{
+  margin-top: 5vh;
+  width: 100vw;
+  display: flex;
+  box-sizing: border-box;
+  flex-direction: row;
+  flex-wrap: wrap;
+  /* vertical-align: middle; */
+  padding: 15px;
+  justify-content: space-evenly;
+  align-items: center;
 }
-#individual-sticky{
-  height: 100px;
-  width: 100px;
-  background-color: yellowgreen;
+.individual-sticky{
+  height: 230px;
+  width: 250px;
+  background-color: #ffff88;
+  display: flex;
+  box-sizing: border-box;
+  flex-direction: column;
+  align-items: center;
+  vertical-align: middle;
+  margin: 15px;
+}
+.delete-sticky-div {
+  width: 250px;
+  height: 25px;
+  display: flex;
+  box-sizing: border-box;
+  flex-direction: row-reverse;
+  
+}
+.delete-sticky-button {
+  background-color: transparent;
+  border: transparent;
+  font-weight: 800;
+  display: flex;
+  box-sizing: border-box;
+  padding: 5px;
+}
+.sticky-contents {
+  align-content: center;
+
 }

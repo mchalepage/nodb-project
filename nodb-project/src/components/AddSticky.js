@@ -12,7 +12,7 @@ class AddSticky extends Component {
 
     handleAddSticky(){
         const newSticky = {
-            contents: '',
+            contents: 'Type something...',
         }
         this.props.makeSticky(newSticky)
     }

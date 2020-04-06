@@ -25,27 +25,38 @@ class Sticky extends Component {
     }
 
     handleSaveContents(){
-        this.props.saveContents(this.props.sticky.id, this.state.userInput)
+        this.props.editSticky(this.props.sticky.id, this.state.userInput)
         this.toggleEdit()
     }
 
     render(){
         return(
             <div className="individual-sticky">
+                <div className="delete-sticky-div">
+                    <button
+                    className="delete-sticky-button"
+                    onClick={() => this.props.deleteSticky(this.props.sticky.id)}
+                    >
+                    X
+                    </button>
+                </div>
+
                 {this.state.isEditing ? (
                     <div>
-                        <input onChange={this.handleChange} />
+                        <input 
+                        placeholder={this.props.sticky.contents}
+                        onChange={this.handleChange} />
                         <button onClick={this.toggleEdit}>Cancel</button>
                         <button onClick={this.handleSaveContents}>Save</button>
                     </div>
                 ):(
-                    <p onDoubleClick={this.toggleEdit}>{this.props.sticky.contents}</p>
+                    <p 
+                    className="sticky-contents"
+                    onDoubleClick={this.toggleEdit}
+                    >
+                    {this.props.sticky.contents}
+                    </p>
                 )}
-                <button
-                onClick={() => this.props.deleteSticky(this.props.sticky.id)}
-                >
-                Delete Sticky
-                </button>
             </div>
         )
     }
