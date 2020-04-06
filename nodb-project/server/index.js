@@ -6,8 +6,8 @@ const app = express()
 app.use(express.json())
 
 app.get('/api/stickies', stickyCtrl.getStickies)
-app.post('/api/stickies/sticky', stickyCtrl.makeSticky)
-app.put('/api/stickies/sticky/:id', stickyCtrl.editSticky)
-app.delete('/api/stickies/sticky/:id', stickyCtrl.deleteSticky)
+app.post('/api/stickies', stickyCtrl.makeSticky)
+app.put('/api/stickies/:id', stickyCtrl.editSticky)
+app.delete('/api/stickies/:id', stickyCtrl.deleteSticky)
 
 app.listen(PORT, () => console.log(`Listening on port ${PORT}`))

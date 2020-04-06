@@ -25,7 +25,7 @@ class App extends Component {
   }
 
   makeSticky(newSticky){
-    axios.post('/api/stickies/sticky', newSticky).then(res => {
+    axios.post('/api/stickies', newSticky).then(res => {
       this.setState({
         allStickies: res.data
       })
@@ -33,7 +33,7 @@ class App extends Component {
   }
 
   editSticky(id, newContents){
-    axios.put(`/api/stickies/sticky/${id}`, {newContents}).then(res => {
+    axios.put(`/api/stickies/${id}`, {newContents}).then(res => {
       this.setState({
         allStickies: res.data
       })
@@ -41,7 +41,7 @@ class App extends Component {
   }
 
   deleteSticky(id){
-    axios.delete(`/api/stickies/sticky/${id}`).then(res => {
+    axios.delete(`/api/stickies/${id}`).then(res => {
       this.setState({
         allStickies: res.data
       })
