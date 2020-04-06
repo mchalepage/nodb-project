@@ -58,8 +58,8 @@ class App extends Component {
         />
         <Stickies 
         allStickies={this.state.allStickies}
-        editSticky={this.editSticky}
-        deleteSticky={this.deleteSticky}
+        // editSticky={this.editSticky}
+        // deleteSticky={this.deleteSticky}
         />
       </div>
     );

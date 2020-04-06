@@ -3,11 +3,11 @@ import Sticky from './Sticky'
 import '../App.css'
 
 function Stickies(props){
-    const allStickies = props.allStickies.map(stickies => {
+    const stickiesList = props.allStickies.map(sticky => {
         return (
             <Sticky
-            key={stickies.id}
-            stickies={stickies}
+            key={sticky.id}
+            sticky={sticky}
             editSticky={props.editSticky}
             deleteSticky={props.deleteSticky}
             />
@@ -16,7 +16,10 @@ function Stickies(props){
 
     return (
         <div className="all-stickies">
-            {allStickies}
+            <div>
+            {stickiesList}
+            </div>
+            
         </div>
     )
 }

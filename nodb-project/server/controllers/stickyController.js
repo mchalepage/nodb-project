@@ -1,4 +1,4 @@
-let stickies = []
+let stickies = [{contents: 'Edit me.', id: 0}]
 let id = 1
 
 module.exports = {
