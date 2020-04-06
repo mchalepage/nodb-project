@@ -40,6 +40,7 @@ Header{
   font-size: 50px;
   line-height:  0px;
   text-align: center;
+  font-family: "Comic Sans MS", "Comic Sans", cursive;
 }
 .all-stickies{
   margin-top: 5vh;
@@ -80,6 +81,7 @@ Header{
   display: flex;
   box-sizing: border-box;
   padding: 6px;
+  font-family: "Comic Sans MS", "Comic Sans", cursive;
 }
 .sticky-contents-div {
   height: 200px;
